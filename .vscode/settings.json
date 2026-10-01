@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "Semana 1",
+        "Semana 2"
+    ],
+    "java.project.referencedLibraries": [
+        "biblioteca_progiii.jar"
+    ]
+}
