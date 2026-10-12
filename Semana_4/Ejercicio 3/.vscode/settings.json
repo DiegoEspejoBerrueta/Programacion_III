@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\diego\\OneDrive\\Imágenes\\Desktop\\Universidad\\3º Estadística\\Programacion_III\\biblioteca_progiii.jar"
+    ]
+}
