@@ -6,10 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Frutería",
+            "request": "launch",
+            "mainClass": "Frutería",
+            "projectName": "Semana_4_49f66b78"
+        },
+        {
+            "type": "java",
             "name": "Argumentos",
             "request": "launch",
             "mainClass": "Argumentos",
-            "args": ["5", "7"]
+            "args": [
+                "5",
+                "7"
+            ]
         }
     ]
 }

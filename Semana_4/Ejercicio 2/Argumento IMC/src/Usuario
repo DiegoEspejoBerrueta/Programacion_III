@@ -1,0 +1,49 @@
+public class Usuario{
+    // Atributos
+    private String nombre;
+    private double altura_en_cm;
+    private double peso_en_kg;
+
+    // Constructores
+    public Usuario(String nombre, double altura_en_cm, double peso_en_kg) {
+        this.nombre = nombre;
+        this.altura_en_cm = altura_en_cm;
+        this.peso_en_kg = peso_en_kg;
+    }
+
+    // Getters and Setters
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public float getAltura_en_cm() {
+        return this.altura_en_cm;
+    }
+
+    public void setAltura_en_cm(double altura_en_cm) {
+        this.altura_en_cm = altura_en_cm;
+    }
+
+    public float getPeso_en_kg() {
+        return this.peso_en_kg;
+    }
+
+    public void setPeso_en_kg(double peso_en_kg) {
+        this.peso_en_kg = peso_en_kg;
+    }
+    public double calcularIMC() {
+        return peso / (altura * altura);
+    }
+
+    public static Usuario crearUsuario(String[] argumentos) {
+        String nombre = argumentos[0];
+        double peso = Double.parseDouble(argumentos[1]);
+        double altura = Double.parseDouble(argumentos[2]);
+
+        return new Usuario(nombre, peso, altura);
+    }
+}
