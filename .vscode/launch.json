@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CrudArrayList",
+            "request": "launch",
+            "mainClass": "CrudArrayList",
+            "projectName": "Programacion_III_e29fc485"
+        },
+        {
+            "type": "java",
             "name": "CrudArrays",
             "request": "launch",
             "mainClass": "CrudArrays",
