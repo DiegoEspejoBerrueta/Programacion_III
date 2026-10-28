@@ -1,7 +1,6 @@
 
 import static es.usal.progiii.tools.Esdia.*;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 
 public class CrudArrayList {
