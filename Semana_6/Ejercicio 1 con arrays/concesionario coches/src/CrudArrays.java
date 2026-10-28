@@ -1,4 +1,4 @@
-package Ejercicio_1_con_arrays;
+
 
 import static es.usal.progiii.tools.Esdia.*;
 
