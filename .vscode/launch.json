@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CrudHashMap",
+            "request": "launch",
+            "mainClass": "CrudHashMap",
+            "projectName": "Programacion_III_e29fc485"
+        },
+        {
+            "type": "java",
+            "name": "CrudHashSet",
+            "request": "launch",
+            "mainClass": "CrudHashSet",
+            "projectName": "Programacion_III_e29fc485"
+        },
+        {
+            "type": "java",
             "name": "CrudArrayList",
             "request": "launch",
             "mainClass": "CrudArrayList",

@@ -11,80 +11,72 @@ public class CrudHashSet {
         int opcion;
         do {
             System.out.println("\n--- MENU CRUD ---");
-            System.out.println("1. Agregar persona");
-            System.out.println("2. Eliminar persona");
-            System.out.println("3. Modificar persona");
-            System.out.println("4. Listar personas");
+            System.out.println("1. Agregar coche");
+            System.out.println("2. Eliminar coche");
+            System.out.println("3. Modificar coche");
+            System.out.println("4. Listar coches");
             System.out.println("5. Salir");
             opcion = readInt("Ingrese una opción: ");
-
+            
             switch (opcion) {
-                case 1: agregarPersona(); break;
-                case 2: eliminarPersona(); break;
-                case 3: modificarPersona(); break;
-                case 4: listarPersonas(); break;
+                case 1: agregarCoche(); break;
+                case 2: eliminarCoche(); break;
+                case 3: modificarCoche(); break;
+                case 4: listarCoches(); break;
                 case 5: System.out.println("¡Hasta luego!"); break;
                 default: System.out.println("Opción no válida.");
             }
         } while (opcion != 5);
     }
 
-    public static void agregarPersona() {
-        String nombre = readString_ne("Ingrese el nombre de la persona: ");
-        int edad = readInt("Ingrese la edad de la persona: ");
-        double altura = readDouble("Ingrese la altura de la persona (ej. 1.75): ");
 
-        Persona nuevaPersona = new Persona(nombre, edad, altura);
-        // Add devuelve false si la persona añadida ya está en el Set
-        // Para que la persona sea igual a otra es necesario implementar equals y hash
-        // Consulta la clase Persona y los métodos implementados al final de esta.
-        if (!personas.add(nuevaPersona)) {
-            System.out.println("Persona con ese nombre ya existe.");
+    public static void agregarCoche() {
+        String matricula = readString_ne("Ingrese la matrícula del coche: ");
+        String marca = readString_ne("Ingrese la marca del coche: ");
+        double velocidad = readDouble("Ingrese la velocidad del coche: ");
+        int caballos = readInt("Ingrese los caballos del coche: ");
+        Coches nuevoCoche = new Coches(matricula, marca, velocidad, caballos);
+        if (!coches.add(nuevoCoche)) {
+            System.out.println("Coche con esa matrícula ya existe.");
         }
     }
 
-    public static void eliminarPersona() {
-        String nombre = readString_ne("Ingrese el nombre de la persona a eliminar: ");
-        Persona personaAEliminar = new Persona(nombre, 0, 0); // Valores temporales solo para comparación
-        // Equals y HashCode se han implementado solo teniendo en cuenta el nombre
-        if (!personas.remove(personaAEliminar)) {
-            System.out.println("Persona no encontrada.");
+    public static void eliminarCoche() {
+        String matricula = readString_ne("Ingrese la matrícula del coche a eliminar: ");
+        Coches cocheAEliminar = new Coches(matricula, "seat", 0, 0); 
+        if (!coches.remove(cocheAEliminar)) {
+            System.out.println("Coche no encontrado.");
         } else {
-            System.out.println("Persona eliminada.");
+            System.out.println("Coche eliminado.");
         }
     }
 
-    public static void modificarPersona() {
-        String nombre = readString_ne("Ingrese el nombre de la persona a modificar: ");
-
-        Persona personaAModificar = new Persona(nombre, 0, 0); // Valores temporales solo para comparación
-        // Aquí sucede lo mismo.
-        if (!personas.contains(personaAModificar)) {
-            System.out.println("Persona no encontrada.");
+    public static void modificarCoche() {
+        String matricula = readString_ne("Ingrese la matrícula del coche a eliminar: ");
+        Coches cocheAModificar = new Coches(matricula, "seat", 0, 0);
+        if (!coches.contains(cocheAModificar)) {
+            System.out.println("Coche no encontrado.");
             return;
         }
 
-        // Continuación de la lógica para modificar los datos
-        String nuevoNombre = readString_ne("Ingrese el nuevo nombre: ");
-        int nuevaEdad = readInt("Ingrese la nueva edad: ");
-        System.out.print("Ingrese la nueva altura (ej. 1.75): ");
-        double nuevaAltura = readDouble("Ingrese la nueva altura (ej. 1.75): ");
+        String nuevamatricula = readString_ne("Ingrese la nueva matrícula del coche: ");
+        String nuevamarca = readString_ne("Ingrese la nueva marca del coche: ");
+        double nuevavelocidad = readDouble("Ingrese la nueva velocidad del coche: ");
+        int nuevoscaballos = readInt("Ingrese los nuevos caballos del coche: ");
 
-        // Solo es necesario el nombre para que dos Personas sean iguales
-        personas.remove(personaAModificar);
-        personas.add(new Persona(nuevoNombre, nuevaEdad, nuevaAltura));
+        coches.remove(cocheAModificar);
+        coches.add(new Coches(nuevamatricula, nuevamarca, nuevavelocidad, nuevoscaballos));
     }
 
-    public static void listarPersonas() {
+    public static void listarCoches() {
 
-        // Si está vacío, no se puede recorrer
-        if (personas.isEmpty()) {
-            System.out.println("No hay personas para mostrar.");
+        if (coches.isEmpty()) {
+            System.out.println("No hay coches para mostrar.");
             return;
         }
 
-        for (Persona persona : personas) {
-            System.out.println(String.format("HashCode:%10d - %s",persona.hashCode(), persona.getEstadoComoString()));
+        for (Coches coche : coches) {
+            System.out.println(String.format("HashCode:%10d - %s",coches.hashCode(), ((Coches) coche).getEstadoComoString()));
         }
     }
     
