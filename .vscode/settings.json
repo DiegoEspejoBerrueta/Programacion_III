@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
         "Semana_6/Ejercicio 1/concesionario coches/src",
+        "Semana_6/Ejercicio 1 con colecciones/coches concesionario/src",
         "Semana_6/Ejercicio 1 arrays/concesionario coches/src",
         "Semana_5/Ejercicio 2/ejercicio 2/src",
         "Semana_3/Ejercicio 3/Mejora IMC/src",
@@ -13,7 +14,7 @@
         "Semana_1/Ejercicio 3/ejercicio 3",
         "Semana_1/Ejercicio 2/suma/src",
         "Semana_1/Ejercicio 1/Hola_Mundo/src",
-        "Semana_6/Ejercicio 1 con colecciones/coches concesionario/src"
+        "Semana_6/Ejercicio 3/Libreria/src"
     ],
     "java.project.referencedLibraries": [
         "biblioteca_progiii.jar",
