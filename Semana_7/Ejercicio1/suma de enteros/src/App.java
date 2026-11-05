@@ -10,7 +10,7 @@ public class App {
         Controlador controlador = new Controlador(vista, modelo);
 
         vista.setControlador(controlador);
-        controlador.runControlador();
+        vista.mostrarMenu();
     }
 }
  
