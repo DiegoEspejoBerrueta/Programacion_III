@@ -1,17 +1,16 @@
+
 import View.Vista;
 import Model.Modelo;
-
-import java.lang.ModuleLayer.Controller;
-
 import Controller.Controlador;
 
 public class App {
     public static void main(String[] args) {
-        Model modelo = new Model();
-        View vista = new Vista();
-        Controller controlador = new Controller();
+        Modelo modelo = new Modelo();
+        Vista vista = new Vista();
+        Controlador controlador = new Controlador(vista, modelo);
 
-        vista.setController(controlador);
-        vista.mostrarMenuPrincipal();
+        vista.setControlador(controlador);
+        controlador.runControlador();
     }
 }
+ 

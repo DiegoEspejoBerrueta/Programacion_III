@@ -1,21 +1,35 @@
+package Model;
+
 public class Modelo {
     
     //Atributos del modelo
-    private int number1;
-    private int number2;
-    private int sum;
+    private int num1;
+    private int num2;
+    private int suma;
 
     //Getter y setter para el 1er nº
-    public int getNumber1(){
-        return number1;
+    public int getNum1(){
+        return num1;
     }
-    public void setNumber1(int number1){
-        this.number1 = number1;
+    public void setNum1(int num1){
+        this.num1 = num1;
     }
 
     //Getter y setter para el 2º nº
-    public int getNumber2(){
-        return number2;
+    public int getNum2(){
+        return num2;
+    }
+    public void setNum2(int num2){
+        this.num2 = num2;
     }
 
-}
+    public void calcularSuma(){
+        this.suma = this.num1 + this.num2;
+    }
+
+    public int getsuma(){
+        return this.suma;
+    }
+
+
+} 

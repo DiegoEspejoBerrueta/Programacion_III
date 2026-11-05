@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "Programacion_III_e29fc485"
+        },
+        {
+            "type": "java",
             "name": "CrudHashMap",
             "request": "launch",
             "mainClass": "CrudHashMap",
