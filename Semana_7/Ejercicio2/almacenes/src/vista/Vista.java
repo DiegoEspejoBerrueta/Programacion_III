@@ -1,10 +1,14 @@
 package vista;
 import controlador.Controlador;
-import java.io.console;
+import java.io.Console;
 
 public class Vista {
     Controlador controlador;
     private Console consola = System.console();
+
+    public void setControlador(Controlador controlador){
+        this.controlador = controlador;
+    }
 
     public void mostrarMenu(){
         String opcion;
@@ -19,10 +23,10 @@ public class Vista {
             opcion = consola.readLine();
             
             switch (opcion) {
-                case "1": leerVentas(); break;
-                case "2": leerPrecios(); break;
-                case "3": calcularIngresosTotales(); break;
-                case "4": mostrarResultados(); break;
+                case "1": controlador.leerVentas(); break;
+                case "2": controlador.leerPrecios(); break;
+                case "3": controlador.calcularIngresosTotales(); break;
+                case "4": controlador.mostrarResultados(); break;
                 case "q": System.out.println("Saliendo... Gracias por usar"); break;
                 default: System.out.println("Opción no válida.");
             }
@@ -31,7 +35,7 @@ public class Vista {
  
     
     //Leer la tabla de ventas
-    public void leerVentas(){
+    public int[][] leerVentas(){
         int[][] ventas = new int[5][2];
         System.out.println("\nIntroduce las ventas: ");
         for(int i=0; i<5; i++){
@@ -45,25 +49,27 @@ public class Vista {
                 ventas[i][j] = valor;
             }
         }
-        System.out.println("Ventas leídas correctamente")
+        System.out.println("Ventas leídas correctamente");
+        return ventas;
     }
 
 
     //Leer la tabla de precios
-    public void leerPrecios(){
+    public double[] leerPrecios(){
         double[] precios = new double[2];
         System.out.println("\nIntroduce los precios de los productos: ");
         for(int i=0; i<2; i++){
             double valor;
             System.out.println(
-                "Precio del producto " + (j+1) + ": "
+                "Precio del producto " + (i+1) + ": "
             );
             String entrada = consola.readLine().replace(',', '.');
             valor = Double.parseDouble(entrada);
             precios[i] = valor;
             
         }
-        System.out.println("Precios leídos correctamente")
+        System.out.println("Precios leídos correctamente");
+        return precios;
     }
 
 

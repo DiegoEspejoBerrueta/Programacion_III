@@ -25,7 +25,7 @@ public class Controlador {
     }
 
     // Opcion 3: Calcular ingresos totales
-    public void calcularIngresos(){
+    public void calcularIngresosTotales(){
         if (!modelo.isVentasLeidas() || !modelo.isPreciosLeidos()) {
             vista.mostrarMensaje(
                 "Error: primero debes introducir las ventas y los precios."

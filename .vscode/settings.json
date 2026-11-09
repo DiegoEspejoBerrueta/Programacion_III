@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
+        "Semana_7/Ejercicio1/suma de enteros/src",
         "Semana_6/Ejercicio2/Modificación Refugio/src",
         "Semana_6/Ejercicio 3/Libreria/src",
         "Semana_6/Ejercicio 1 con colecciones/coches concesionario/src",
@@ -14,7 +15,7 @@
         "Semana_1/Ejercicio 3/ejercicio 3",
         "Semana_1/Ejercicio 2/suma/src",
         "Semana_1/Ejercicio 1/Hola_Mundo/src",
-        "Semana_7/Ejercicio1/suma de enteros/src"
+        "Semana_7/Ejercicio2/almacenes/src"
     ],
     "java.project.referencedLibraries": [
         "biblioteca_progiii.jar",
