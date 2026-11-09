@@ -22,7 +22,7 @@ public class Vista {
                 case "1": leerVentas(); break;
                 case "2": leerPrecios(); break;
                 case "3": calcularIngresosTotales(); break;
-                case "4": mostrarResultado(); break;
+                case "4": mostrarResultados(); break;
                 case "q": System.out.println("Saliendo... Gracias por usar"); break;
                 default: System.out.println("Opción no válida.");
             }
@@ -64,6 +64,50 @@ public class Vista {
             
         }
         System.out.println("Precios leídos correctamente")
+    }
+
+
+    // Mostrar los resultados
+    public void mostrarResultados(int[][] ventas, double[] precios, double[][] ingresos, double ingresosTotales) {
+
+        System.out.println("\nPRECIOS DE LOS PRODUCTOS");
+
+        for (int j = 0; j < 2; j++) {
+            System.out.printf(
+                "Producto %d: %.2f euros%n",
+                j + 1, precios[j]
+            );
+        }
+
+        System.out.println("\nTABLA DE VENTAS E INGRESOS");
+
+        System.out.printf(
+            "%-12s %12s %12s %12s %12s%n",
+            "Almacen", "Ventas P1", "Ventas P2",
+            "Ingresos P1", "Ingresos P2"
+        );
+
+        for (int i = 0; i < 5; i++) {
+
+            System.out.printf(
+                "%-12d %12d %12d %12.2f %12.2f%n",
+                i + 1,
+                ventas[i][0],
+                ventas[i][1],
+                ingresos[i][0],
+                ingresos[i][1]
+            );
+        }
+
+        System.out.printf(
+            "INGRESOS TOTALES: %.2f euros%n",
+            ingresosTotales
+        );
+    }
+
+    // Mostrar mensajes
+    public void mostrarMensaje(String mensaje) {
+        System.out.println(mensaje);
     }
 
 }
