@@ -83,7 +83,7 @@ public class GestorLibrosModel {
                 if (l!=null) {
                     //Comprobar que no existe el libro previamente
                     //Criterio de no importar libros que ya estén en el arraylist de libros
-                    if (!libros.contains(1)) {
+                    if (!libros.contains(l)) {
                         libros.add(l);
                         contadorlibros++;
                     }
@@ -113,15 +113,15 @@ public class GestorLibrosModel {
         Gson gson = new Gson();
         String json;
         try {
-            json = new String(Files.readAllBytes(pathToCSV, StandardCharsets.UTF_8));
+            json = new String(Files.readAllBytes(pathToJSON), StandardCharsets.UTF_8);
             Type tipoList = new TypeToken<ArrayList<Libro>>(){}.getType();
 
             ArrayList<Libro> librosImportados = gson.fromJson(json, tipoList);
 
             int contadorLibrosImportados=0;
             for (Libro l : librosImportados) {
-                if (!libros.contains(1)) {
-                    libros.add(1);
+                if (!libros.contains(l)) {
+                    libros.add(l);
                     contadorLibrosImportados++;
                 }
             }
@@ -136,13 +136,13 @@ public class GestorLibrosModel {
         String xml;
         try {
             //Leer todo el archivo y almacenarlo en xml
-            xml = new String(Files.readAllBytes(pathToXML, StandardCharsets.UTF_8));
+            xml = new String(Files.readAllBytes(pathToXML), StandardCharsets.UTF_8);
             List<Libro> librosImportados = xmlMapper.readValue(xml, xmlMapper.getTypeFactory().constructCollectionType(List.class, Libro.class));
 
             int contadorLibrosImportados=0;
             for (Libro l : librosImportados) {
-                if (!libros.contains(1)) {
-                    libros.add(1);
+                if (!libros.contains(l)) {
+                    libros.add(l);
                     contadorLibrosImportados++;
                 }
             }
@@ -153,7 +153,7 @@ public class GestorLibrosModel {
     }
 
     public int exportBooksToXML() {
-        XmlMapper xmlMapper = new Xmlmapper();
+        XmlMapper xmlMapper = new XmlMapper();
         String xml;
 
         try {

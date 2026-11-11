@@ -20,6 +20,12 @@
     ],
     "java.project.referencedLibraries": [
         "biblioteca_progiii.jar",
-        "c:\\Users\\diego\\OneDrive\\Imágenes\\Desktop\\Universidad\\3º Estadística\\Programacion_III\\biblioteca_progiii.jar"
+        "c:\\Users\\diego\\OneDrive\\Imágenes\\Desktop\\Universidad\\3º Estadística\\Programacion_III\\biblioteca_progiii.jar",
+        "Semana_9/Ejercicio1_Plantilla/Ejercicio1_Plantilla/lib/gson-2.10.1.jar",
+        "Semana_9/Ejercicio1_Plantilla/Ejercicio1_Plantilla/lib/jackson-annotations-2.15.3.jar",
+        "Semana_9/Ejercicio1_Plantilla/Ejercicio1_Plantilla/lib/jackson-core-2.15.3.jar",
+        "Semana_9/Ejercicio1_Plantilla/Ejercicio1_Plantilla/lib/jackson-databind-2.15.3.jar",
+        "Semana_9/Ejercicio1_Plantilla/Ejercicio1_Plantilla/lib/jackson-dataformat-xml-2.15.3.jar",
+        "Semana_9/Ejercicio1_Plantilla/Ejercicio1_Plantilla/lib/stax2-api-4.0.0.jar"
     ]
 }
