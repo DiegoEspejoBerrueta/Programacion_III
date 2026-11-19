@@ -1,6 +1,7 @@
 public class MySQLDatabaseService extends DatabaseService{
     public MySQLDatabaseService(){
-
+        super();
+        System.out.println("Constructor: MySQLDatabaseService");
     }
 
     @Override 

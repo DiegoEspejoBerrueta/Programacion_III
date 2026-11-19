@@ -1,6 +1,7 @@
 public class SQLiteDatabaseService extends DatabaseService{
     public SQLiteDatabaseService(){
-
+        super();
+        System.out.println("Constructor: SQLiteDatabaseService");
     }
 
     @Override 
