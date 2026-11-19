@@ -15,4 +15,8 @@ public class Character implements Damageable{
             System.out.println("El personaje ha muerto");
         }
     }
+
+    public void setHealth(int health){
+        this.health=health;
+    }
 }
